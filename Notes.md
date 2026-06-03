@@ -37,6 +37,9 @@ Here are some of the publications I looked at today to familiarize myself with t
 - Demography with micro data?
   - Maybe look at large periods of immigration or development
   - Look at "inflection points" in housing use demographics
+- Something about urban green space access?
+  - I already have a lot of experience and data in this regard
+  - Create a valuable data set of historic land use in the region. Does this data already exist?
 
 What will these types of projects look like, in terms of what type of work I can do with the materials at the LMEC? Probably will rely on much recompilation, because I am already really familiar with Analyze Boston data, IPUMs, etc. I think working with historic maps would be really valuable to track housing, parcelization, and land use, which could provide an opportunity for digitization.
 
