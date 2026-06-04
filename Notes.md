@@ -81,3 +81,6 @@ What would be required would be a digitization of parcel maps with some enrichme
 
 ## Mid day update
 I think I've decided I'm not going to pursue the idea about tracking where people are moving, because it's looking not very practical and the data is not super accessible just on a cursory look. Right now, I am leaning towards my dataset being a set of snapshot parcel maps and jurisdiction maps from 5-10 key "eras" in the city's history, which could be used to pursue the zoning changes idea, green space access, and submarkets depending on what I want to specialize into.
+
+## Exploring methods
+This AI vectorizing tool looks promising - https://www.geographyrealm.com/ai-digitize-data-scanned-maps/
