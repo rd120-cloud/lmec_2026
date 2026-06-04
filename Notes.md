@@ -32,6 +32,7 @@ Here are some of the publications I looked at today to familiarize myself with t
 ## Ideas I can pursue as my project
 - Do housing submarkets but historically
   - Reach out to MAPC people to see what methods they used to make these maps
+- Zoning and regulation impact on housing over time?
 - Track the movement of individuals over time to see the dynamics of moving in the city
   - Create digraphs with geohashed nodes and distance weights on edges mapping changes in housing of a certain individual from one location to another
 - Demography with micro data?
@@ -45,3 +46,38 @@ What will these types of projects look like, in terms of what type of work I can
 
 Things to look into:
 - ML methods for geocoding parcel polygons from scanned maps?
+
+# June 4
+
+Primary output is a really thorough and reusable dataset.
+
+Criteria for the dataset project:
+- Uses LMEC and BPL collection objects.
+  - Ideally animates resources already in collections with supplemental data or analysis.
+  - I.e. digitized and compiled data from collection maps
+- Reproducible and extensible
+  - Can be extended temporally and spatially
+  - Notebook and code and whatnot
+- Data is published in plaintext open formats
+
+## Data Availability Investigation
+Zoning maps:
+- GW Bromley and Co. Atlas of Boston
+  - 1883/1884
+  - 1902
+  - 1938
+- Boston City Planning Comission, 1924, https://www.digitalcommonwealth.org/search/commonwealth:7h14cv727/manifest
+  - This is the first official planning map for the city with a regulatory zoning policy attatched
+- Boston Zoning Commission, 1962, only maps available online are downtown/bb, Eastie, JP
+  - https://www.digitalcommonwealth.org/search?f%5Bname_facet_ssim%5D%5B%5D=Boston+Zoning+Commission 
+- Urban renewal proposed zoning maps, ~1965
+- BRA 
+
+General timeline may look like pre 1870 (before acquiring Dorchester, Mattapan, Roxbury, Brighton, etc., which happened between 1864 and 1870), 1870-1914 (pre planning board), 1914-1957 (City Planning Board), 1957-1971 (Early BRA), 1971-1994 (Mid BRA, pre EDIC merger), 1994-2016 (Late BRA), 2016-present (BRA transition to BPD).
+
+Because of the nature of sources, it may be practical to combine the green space analysis and the submarket analysis. This could be done using the housing assessments, zoning stats, and then general geospatial analysis.
+
+What would be required would be a digitization of parcel maps with some enrichment using information about the parcels, maybe ownership and residency data, land use qualifications. Maybe some transit system mapping?
+
+## Mid day update
+I think I've decided I'm not going to pursue the idea about tracking where people are moving, because it's looking not very practical and the data is not super accessible just on a cursory look. Right now, I am leaning towards my dataset being a set of snapshot parcel maps and jurisdiction maps from 5-10 key "eras" in the city's history, which could be used to pursue the zoning changes idea, green space access, and submarkets depending on what I want to specialize into.
