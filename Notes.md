@@ -77,7 +77,9 @@ General timeline may look like pre 1870 (before acquiring Dorchester, Mattapan, 
 
 Because of the nature of sources, it may be practical to combine the green space analysis and the submarket analysis. This could be done using the housing assessments, zoning stats, and then general geospatial analysis.
 
-What would be required would be a digitization of parcel maps with some enrichment using information about the parcels, maybe ownership and residency data, land use qualifications. Maybe some transit system mapping?
+What would be required would be a digitization of parcel maps with some enrichment using information about the parcels, maybe ownership and residency data, land use qualifications. Maybe some transit system mapping? Figure out way to divide blocks into parcels?
+
+Might be interesting to compare old "urban wilds" map and stylization to current urban wilds program? https://www.digitalcommonwealth.org/search/commonwealth:7h14cw341 
 
 ## Mid day update
 I think I've decided I'm not going to pursue the idea about tracking where people are moving, because it's looking not very practical and the data is not super accessible just on a cursory look. Right now, I am leaning towards my dataset being a set of snapshot parcel maps and jurisdiction maps from 5-10 key "eras" in the city's history, which could be used to pursue the zoning changes idea, green space access, and submarkets depending on what I want to specialize into.
