@@ -1,6 +1,6 @@
 # Data sources for Historic Assessment and Parcel Data, Boston MA
 ***
-Below are possible data sources that can be used to construct a parcel map of Boston for the given period. The most thorough data source for each period will be chosen for the final dataset.
+Below are possible data sources that can be used to construct a parcel map of Boston for the given period. The most thorough data source for each period will be chosen for the final dataset. Materials below are referenced using LMEC UIDs.
 
 (f) - denotes including data points as a field of the larger map, not as a base polygon layer
 
@@ -9,7 +9,13 @@ Bromley sources will have to be combined with assessment data to get general inf
 (before annexation of Dorchester, Mattapan, Roxbury, Brighton, etc.)
 ## 1870-1902
 (first era of Bromley maps)
-1884 Atlas of the City of Boston, G.W. Bromley & Co.
+1883-1886 Atlas of the City of Boston, G.W. Bromley & Co.
+* tt44pv576 [Boston Proper] 1883
+* tt44pv533 [Dorchester] 1884
+* tt44pv58g [Roxbury] 1884
+* tt44pv59r [East and South] 1884
+* tt44pv55n [West Roxbury] 1884
+* tt44pv60h [Charlestown and Brighton] 1885
 ## 1902-1914 
 (founding Boston Planning Commission)
 1902 Atlas of the City of Boston, G.W. Bromley & Co.

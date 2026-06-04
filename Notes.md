@@ -77,7 +77,7 @@ General timeline may look like pre 1870 (before acquiring Dorchester, Mattapan, 
 
 Because of the nature of sources, it may be practical to combine the green space analysis and the submarket analysis. This could be done using the housing assessments, zoning stats, and then general geospatial analysis.
 
-What would be required would be a digitization of parcel maps with some enrichment using information about the parcels, maybe ownership and residency data, land use qualifications. Maybe some transit system mapping? Figure out way to divide blocks into parcels?
+What would be required would be a digitization of parcel maps with some enrichment using information about the parcels, maybe ownership and residency data, land use qualifications. Maybe some transit system mapping? Figure out way to divide blocks into parcels? Bromley maps are not uniformly georeferenced, so that will be a task.
 
 Might be interesting to compare old "urban wilds" map and stylization to current urban wilds program? https://www.digitalcommonwealth.org/search/commonwealth:7h14cw341 
 
