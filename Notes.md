@@ -86,3 +86,9 @@ I think I've decided I'm not going to pursue the idea about tracking where peopl
 
 ## Exploring methods
 This AI vectorizing tool looks promising - https://www.geographyrealm.com/ai-digitize-data-scanned-maps/
+
+# June 10
+Digitizing methods to explore:
+- Arc Detect Objects ML workflow
+- GDAL preprocessing with a raster analysis framework
+- 
