@@ -1,0 +1,31 @@
+version: 1
+disable_existing_loggers: false
+
+formatters:
+  simpler:
+    format: '%(levelname)s - %(message)s'
+  detailed:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s - [%(filename)s:%(lineno)d]'
+    datefmt: '%Y-%m-%d %H:%M:%S'
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: WARNING
+    formatter: simpler
+    stream: ext://sys.stdout
+  file:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: detailed
+    filename: 'client.log'
+
+loggers:
+  client:
+    level: DEBUG
+    handlers: [console, file]
+    propagate: false
+
+root:
+  level: INFO
+  handlers: [console]
