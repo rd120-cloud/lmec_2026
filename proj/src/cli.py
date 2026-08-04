@@ -1,11 +1,11 @@
-from typing import Callable
+from typing import Callable, ParamSpec, TypeVar, Concatenate
+from pathlib import Path
+from functools import wraps
+from contextlib import contextmanager
 import yaml
 import logging
 import logging.config
 import argparse
-from pathlib import Path
-from functools import wraps
-from contextlib import contextmanager
 
 def setup_logging(verbose: bool = False) -> None:
     log_config = Path(__file__).parent / 'logging_config.yaml'
@@ -38,13 +38,17 @@ def verbose_context(verbose: bool = False):
         yield
     finally:
         pass
+    
+# Define type variables for the decorator
+P = ParamSpec('P')
+T = TypeVar('T')
 
-def verbose_option(func: Callable) -> Callable:
+def verbose_option(func: Callable[Concatenate[bool, P], T]) -> Callable[Concatenate[bool, P], T]:
     @wraps(func)
-    def wrapper(*args, verbose: bool = False, **kwargs):
+    def wrapper(verbose: bool = False, *args: P.args, **kwargs: P.kwargs):
         verboness = verbose
         with verbose_context(verbose):
-            return func(*args, verbose = verboness, **kwargs)
+            return func(verbose = verboness, *args, **kwargs)
     return wrapper
 
 ################################################################################
@@ -58,19 +62,24 @@ def setup_parser():
     global args
     args = parser.parse_args()
 
-from . import client
+from client import createDirectoryStructure, resolve_paths, download_images, manifest
 
 command_registry: dict[str, Callable] = {
-    'download': client.download_images,
-    'path': client.resolve_paths,
-    'manifest': client.manifest
+    'download': download_images,
+    'path': resolve_paths,
+    'manifest': manifest
 }
 
 ################################################################################
 
 @verbose_option
-def test():
+def test(verbose: bool = False):
     logging.info('Test message')
+    
+    if verbose:
+        print("Verbose mode is enabled.")
+    else:
+        print("Verbose mode is disabled.")
 
 def main():
     setup_parser()

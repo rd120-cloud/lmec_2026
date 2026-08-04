@@ -6,13 +6,13 @@ import json
 from .cli import verbose_option
 
 @verbose_option
-def createDirectoryStructure(output_path: Optional[str] = None):
+def createDirectoryStructure(verbose: bool = False, output_path: Optional[str] = None):
     if isinstance(output_path, str):
         base_path = Path(output_path) / 'data'
     else:
         base_path = Path('./data')
     
-    directories = [
+    directories: list[Path] = [
         base_path / 'tmp',
         base_path / 'tmp' / 'img',
         base_path / 'tmp' / 'annotations',
@@ -20,6 +20,7 @@ def createDirectoryStructure(output_path: Optional[str] = None):
         base_path / 'tmp' / 'warped',
         base_path / 'output',
     ]
+    
     for directory in directories:
         if directory.exists():
             logging.info(f"Directory already exists: {directory}")
@@ -28,11 +29,11 @@ def createDirectoryStructure(output_path: Optional[str] = None):
             directory.mkdir(parents=True)
 
 @verbose_option
-def resolve_paths():
+def resolve_paths(verbose: bool = False, output_path: Optional[str] = None):
     return NotImplemented
 
 @verbose_option
-def download_images(identifier: str):
+def download_images(identifier, verbose: bool = False):
     """
     Downloads images from IIIF given the manifest UID and saves them to the specified output path.
 
@@ -47,7 +48,7 @@ def download_images(identifier: str):
     allmapsManifest = requests.get(f'https://annotations.allmaps.org/?url=https://www.digitalcommonwealth.org/search/{identifier}/manifest.json').json()
 
 @verbose_option
-def manifest():
+def manifest(verbose: bool = False):
     if verbose:
         print(allmapsManifest)
     else:
