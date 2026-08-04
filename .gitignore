@@ -1,2 +1,4 @@
 arc/
 data/
+
+src/__pycache__/
