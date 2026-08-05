@@ -1,3 +1,7 @@
+'''
+Allmaps Python CLI tools
+'''
+
 from typing import Callable
 import argparse
 
